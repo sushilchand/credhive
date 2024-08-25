@@ -43,9 +43,9 @@ docker-compose run web python manage.py generate_dummy_data
 
 ```
 ## Postgresql DB Schema
-```
+
 ![DB Diagram](images/dbdiagram.png)
-```
+
 
 ## Access your Application
 
