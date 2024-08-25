@@ -1,0 +1,34 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:13
+    container_name: postgres
+    environment:
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  web:
+    build: .
+    container_name: django_app
+    command: ["gunicorn", "--bind", "0.0.0.0:8000", "credhive.wsgi:application"]
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    environment:
+      - DJANGO_DB_HOST=db
+      - DJANGO_DB_PORT=5432
+      - DJANGO_DB_NAME=mydatabase
+      - DJANGO_DB_USER=myuser
+      - DJANGO_DB_PASSWORD=mypassword
+    volumes:
+      - .:/app
+
+volumes:
+  postgres_data:
