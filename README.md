@@ -50,7 +50,7 @@ docker-compose run web python manage.py generate_dummy_data
 ## Access your Application
 
 ```
-Django Application: Open http://localhost:8000/ in your browser.
+Django Application: Open http://localhost:8000/admin/ in your browser.
 PostgreSQL: Connect to PostgreSQL using localhost:5432, with the username, password, and database name you configured.
 ```
 
