@@ -4,8 +4,6 @@
 # Ignore all .lock files
 *.lock
 
-# Ignore all .txt files
-*.txt
 # Ignore DS store files
 .DS_Store
 
