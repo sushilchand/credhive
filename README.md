@@ -10,7 +10,7 @@
 
 ## Getting Started
 ```
-Developed RESTful APId that provides credit information data to a front-end dashboard. The
+Developed RESTful APIs that provides credit information data to a front-end dashboard. The
 API will handle requests to retrieve and manipulate credit information which is computed as
 just a difference of annual turnover for last 2 years and due loans.
 ```
