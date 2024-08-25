@@ -20,7 +20,7 @@ just a difference of annual turnover for last 2 years and due loans.
 - Clone the repo
 
 ```
-git clone https://github.com/aerabi/link-shortener
+git clone https://github.com/sushilchand/credhive.git
 ```
 
 - Bring up the app
@@ -41,6 +41,10 @@ docker-compose run web python manage.py createsuperuser
 # Generate Dummy data
 docker-compose run web python manage.py generate_dummy_data
 
+```
+## Postgresql DB Schema
+```
+![DB Diagram](images/diagram.png)
 ```
 
 ## Access your Application
