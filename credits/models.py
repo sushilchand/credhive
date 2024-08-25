@@ -8,14 +8,14 @@ from django.db import models
 
 # Create your models here.
 class Company(TimestampModel):
-    name = models.CharField(max_length=40, unique=True)
+    name = models.CharField(max_length=50, unique=True)
     readable_id = models.CharField(max_length=50, unique=True, blank=True)
     address = models.TextField(max_length=100)
     regitration_date = models.DateField()
     employee_count = models.SmallIntegerField()
     email = models.EmailField(unique=True)
-    contact = models.CharField(max_length=30)
-    website = models.CharField(max_length=20)
+    contact = models.CharField(max_length=50)
+    website = models.CharField(max_length=50)
 
     class Meta:
         verbose_name_plural = "Companies"
